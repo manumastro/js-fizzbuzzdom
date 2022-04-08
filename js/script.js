@@ -19,20 +19,23 @@ for(let i = 1; i <= limit; i++){
   boxEL.className = 'box';
 
   if(!(i % 3) && !(i % 5)){
+    boxEL.classList.add("box-red");
     boxEL.append("FizzBuzz");
     container.append(boxEL);
   }
   else if(i % 5 === 0){
+    boxEL.classList.add("box-yellow");
     boxEL.append("Buzz");
     container.append(boxEL);
   }
   else if (i % 3 === 0){
+    boxEL.classList.add("box-green");
     boxEL.append("Fizz");
     container.append(boxEL);
   }
   else{
+    boxEL.classList.add("box-blue");
     boxEL.append(i);
     container.append(boxEL);
   }
-
 }
